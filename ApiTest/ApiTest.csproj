@@ -9,6 +9,9 @@
     <PackageProjectUrl>https://github.com/jonnidip/ApiTest</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>ApiTestHelper</PackageId>
+    <Description>Classes for .NET 5 Asp.Net API testing.</Description>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
