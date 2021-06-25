@@ -17,7 +17,7 @@ namespace ApiTest
         /// Creates a new host for testing
         /// </summary>
         /// <typeparam name="TStartup">The startup class</typeparam>
-        /// <param name="configuration">Test configuration, as Dictionary<string, string></param>
+        /// <param name="configuration">Test configuration, as <c>Dictionary&lt;string, string&gt;</c></param>
         /// <returns></returns>
         public static IHost GetTestHost<TStartup>(IDictionary<string, string> configuration) where TStartup : class
             => GetTestHost<TStartup>(new ConfigurationBuilder()
@@ -40,13 +40,15 @@ namespace ApiTest
         /// <param name="configuration">Test configuration, as IConfiguration. Use ConfigurationBuilder to create an in-memory collection</param>
         /// <param name="servicesConfiguration">Method that makes needed services substitution</param>
         /// <example>
+        /// <code>
         /// void ServicesConfiguration(IServiceCollection services)
-        //{
-        //    services.Replace<IConfigReader, ConfigReaderMock>();
-        //    services.Replace<IDbConnectionFactory, DbConnectionFactoryMock>();
-        //    services.Replace<IDbRepository, FakeDbRepository>();
-        //    services.Replace<IMemoryCache, FakeMemoryCache>();
-        //}
+        /// {
+        ///     services.Replace&lt;IConfigReader, ConfigReaderMock&gt;();
+        ///     services.Replace&lt;IDbConnectionFactory, DbConnectionFactoryMock&gt;();
+        ///     services.Replace&lt;IDbRepository, FakeDbRepository&gt;();
+        ///     services.Replace&lt;IMemoryCache, FakeMemoryCache&gt;();
+        /// }
+        /// </code>
         /// </example>
         /// <returns></returns>
         public static IHost GetTestHost<TStartup>(IConfiguration configuration, Action<IServiceCollection>? servicesConfiguration) where TStartup : class
